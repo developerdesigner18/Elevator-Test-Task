@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+     font-family: "Montserrat", sans-serif;
+    background-color: #EEEEEE;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    width: fit-content;
+    gap: 20px;
+}
+.floor-container{
+    display: flex;
+    flex-direction: column;
+        align-items: flex-end;
+}
+.floor-container .floor{
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 15px;
+    font-weight: bold;
+}
+.main-track-container{
+    display: flex;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.main-track-container .track-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.main-track-container .track-container:not(:last-child){
+    border-right: 1px solid #efefef;
+}
+.main-track-container .track-container .track{
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+}
+.main-track-container .track-container .track:not(:last-child){
+    border-bottom: 1px solid #efefef;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+}
+.btn-container .btn{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn-container .btn button{
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    width: 80px;
+    line-height: 1.2;
+    border-radius: 4px;
+    text-transform: capitalize;
+    outline: none !important;
+    
+}
+.btn-container .btn button.call{
+    background-color: #5BCD88;
+    border: 1px solid #5BCD88;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-container .btn button.arrived{
+    border: 1px solid #5BCD88;
+    color: #5BCD88;
+    cursor: default;
+}
+.btn-container .btn button.waiting{
+    border: 1px solid #ED484D;
+    background-color: #ED484D;
+    color: #fff;
+    cursor: default;
+}
+.track-container .lift{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+    transition: bottom 1.2s linear;
+    fill: black;
+}
